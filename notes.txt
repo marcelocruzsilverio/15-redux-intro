@@ -1,0 +1,28 @@
+Para usar o midleware precisamos seguir três passos:
+1- instalar o midleware package com o comando => npm i redux-thunk
+
+2- Aplicar o midleware para a store
+importar thunk from redux-thunk
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
+3- Usar o midleware na action creator function
+
+#################################################################
+
+Para utilizar o redux dev tools que vem no google chrome precisamos instalar esse pacote no projeto
+utilizando o comando npm i redux-devtools-extension
+
+Em seguida precisamos importar o composeWithDevTools na store
+import { composeWithDevTools } from "redux-devtools-extension";
+
+E também compor o middleware com o composeWithDevTools, dessa forma
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+);
+
+##################################################################
+Redux toolkit
+Para usar o redux toolkit, precisamos instalar usando o comando:
+npm i @reduxjs/toolkit 
